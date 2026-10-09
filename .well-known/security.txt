@@ -1,0 +1,5 @@
+Contact: mailto:hello@deepbuild.tech
+Expires: 2027-10-09T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://deepbuild.tech/.well-known/security.txt
+Policy: https://deepbuild.tech/security/

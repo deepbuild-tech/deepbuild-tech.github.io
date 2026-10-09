@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 144" role="img" aria-labelledby="title description">
+  <title id="title">DeepBuild</title>
+  <desc id="description">DeepBuild wordmark with its three-bar mark.</desc>
+  <g transform="translate(24 24) scale(4)">
+    <rect width="24" height="24" rx="5.5" fill="#1d1d1f"/>
+    <rect x="6" y="6.6" width="6" height="2.6" rx="0.4" fill="#fff"/>
+    <rect x="6" y="10.7" width="9" height="2.6" rx="0.4" fill="#fff"/>
+    <rect x="6" y="14.8" width="12" height="2.6" rx="0.4" fill="#fff"/>
+  </g>
+  <text x="145" y="94" fill="#1d1d1f" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="56" font-weight="600" letter-spacing="-1.12">DeepBuild</text>
+</svg>
