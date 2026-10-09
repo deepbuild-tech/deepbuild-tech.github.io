@@ -20,6 +20,8 @@ python tools/check_site.py . --base http://127.0.0.1:8080
 
 After launch, run `python tools/check_site.py . --base https://deepbuild.tech --validate` to fetch the live pages and validate them with the W3C checker.
 
+Icons on the home page are from [Tabler Icons](https://tabler.io/icons) 3.49.0 (MIT License, Copyright (c) 2020-2024 Paweł Kuna). The workflow illustration (`assets/automation-flow.svg`) is original.
+
 The Privacy and Terms pages are plain-language drafts and have not been reviewed by a lawyer.
 
 Contact: hello@deepbuild.tech

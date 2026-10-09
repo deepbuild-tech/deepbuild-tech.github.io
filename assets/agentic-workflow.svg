@@ -3,18 +3,18 @@
   <desc id="description">DeepBuild applies domain knowledge, agentic systems, human oversight and integrations across two lines of work: tailored systems for businesses, including customer support and supply-chain workflows, and focused venture products for specialist domains. The CA-firm assistant is in development; Apnon, family health agents, is in exploration.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, Arial, sans-serif; }
-    .eyebrow { fill: #a1a1a6; font-size: 13px; font-weight: 600; letter-spacing: 1.35px; }
+    .eyebrow { fill: #b9b2dc; font-size: 13px; font-weight: 600; letter-spacing: 1.35px; }
     .title { fill: #ffffff; font-size: 29px; font-weight: 600; letter-spacing: -0.7px; }
-    .shared { fill: #1d1d1f; }
+    .shared { fill: #221660; }
     .shared-text { fill: #ffffff; font-size: 15px; font-weight: 500; }
-    .card { fill: #000000; stroke: #424245; stroke-width: 1.5; }
-    .card-soft { fill: #1d1d1f; stroke: #424245; stroke-width: 1.2; }
+    .card { fill: #160c40; stroke: #3a2f6e; stroke-width: 1.5; }
+    .card-soft { fill: #221660; stroke: #3a2f6e; stroke-width: 1.2; }
     .heading { fill: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: -0.45px; }
-    .body { fill: #a1a1a6; font-size: 16px; font-weight: 400; }
-    .small { fill: #a1a1a6; font-size: 14px; font-weight: 400; }
+    .body { fill: #b9b2dc; font-size: 16px; font-weight: 400; }
+    .small { fill: #b9b2dc; font-size: 14px; font-weight: 400; }
     .item-title { fill: #ffffff; font-size: 17px; font-weight: 600; }
-    .status { fill: #a1a1a6; font-size: 13px; font-weight: 600; letter-spacing: 0.55px; }
-    .connector { fill: none; stroke: #6e6e73; stroke-width: 1.8; }
+    .status { fill: #b9b2dc; font-size: 13px; font-weight: 600; letter-spacing: 0.55px; }
+    .connector { fill: none; stroke: #7a6fb0; stroke-width: 1.8; }
     .moving-connector { fill: none; stroke: #ffffff; stroke-width: 2.4; stroke-dasharray: 2 14; stroke-linecap: round; animation: flow 4s linear infinite; }
     .arrow { fill: none; stroke: #ffffff; stroke-width: 1.5; }
     @keyframes flow { to { stroke-dashoffset: -64; } }

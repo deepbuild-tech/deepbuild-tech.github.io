@@ -20,13 +20,13 @@
 
 :root {
   --white: #ffffff;
-  --mist: #f5f5f7;
+  --mist: #f4f2fd;
   --ink: #1d1d1f;
-  --black: #000000;
-  --grey: #6e6e73;
-  --silver: #a1a1a6;
-  --line: #d2d2d7;
-  --line-dark: #424245;
+  --black: #140b3a;
+  --grey: #625e78;
+  --silver: #b9b2dc;
+  --line: #e2def5;
+  --line-dark: #3a2f6e;
 
   --font: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -229,7 +229,7 @@ a { color: inherit; }
 }
 .button:hover { background: var(--ink); color: var(--white); }
 .button.primary { background: var(--ink); color: var(--white); }
-.button.primary:hover { background: #3a3a3c; border-color: #3a3a3c; }
+.button.primary:hover { background: #4a31c2; border-color: #4a31c2; }
 .button:active { transform: scale(0.97); }
 
 /* ---------- home hero ---------- */
@@ -525,7 +525,7 @@ a { color: inherit; }
 .ds-products .ds-domain { grid-column: 1 / -1; font-size: 0.8125rem; color: var(--grey); }
 .ds-products strong { font-weight: 600; }
 
-.band-dark .ds-shared { background: #1d1d1f; }
+.band-dark .ds-shared { background: rgba(255, 255, 255, 0.06); }
 .band-dark .ds-card { border-color: var(--line-dark); }
 .band-dark .ds-label,
 .band-dark .ds-body,
@@ -534,7 +534,7 @@ a { color: inherit; }
 .band-dark .ds-products .ds-domain,
 .band-dark .ds-products .status { color: var(--silver); }
 .band-dark .ds-steps li,
-.band-dark .ds-products li { background: #1d1d1f; }
+.band-dark .ds-products li { background: rgba(255, 255, 255, 0.06); }
 
 /* ---------- positioning job (2026-10-09): three-part structure, industries ---------- */
 .work.work-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -551,3 +551,179 @@ a { color: inherit; }
 .industry-note { margin-top: 20px; font-size: 0.875rem; color: var(--grey); max-width: 62ch; }
 .points.points-follow { margin-top: 24px; }
 .points p a { color: inherit; text-underline-offset: 0.18em; }
+
+/* ---------- Hostinger-inspired pass (2026-10-10, local) ----------
+   One accent, indigo-violet #5B3FD9: white on it 6.65:1, it on white 6.65:1, on mist 6.11:1.
+   Dark hero #1A0F4A -> #0D0826 with a soft violet glow; white on #1A0F4A 17.3:1, lavender #C9B8FF 9.7:1. */
+:root { --accent: #5b3fd9; --accent-hover: #4a31c2; --night: #1a0f4a; }
+
+.button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.button.primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.band-light .more, .band-mist .more { color: var(--accent); }
+.more::after { content: " \2192"; }
+
+/* menu: Contact as an outlined pill */
+.site-header nav li:last-child a { padding: 6px 14px; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); }
+.site-header nav li:last-child a::after { display: none; }
+.site-header nav li:last-child a:hover,
+.site-header nav li:last-child a[aria-current="page"] { background: var(--accent); color: #fff; }
+
+/* home: header sits on the dark hero until the page scrolls */
+.home .site-header:not(.is-scrolled) { background: transparent; border-bottom-color: transparent; }
+.home .site-header:not(.is-scrolled) .brand { color: #fff; }
+.home .site-header:not(.is-scrolled) nav a { color: rgba(255, 255, 255, 0.78); }
+.home .site-header:not(.is-scrolled) nav a:hover { color: #fff; }
+.home .site-header:not(.is-scrolled) nav li:last-child a { border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+.home .site-header:not(.is-scrolled) nav li:last-child a:hover { background: #fff; color: var(--night); }
+.home .site-header:not(.is-scrolled) .brand-mark rect:first-child { fill: #fff; }
+.home .site-header:not(.is-scrolled) .brand-mark rect + rect { fill: var(--night); }
+
+/* hero: dark, centred, glowing */
+.hero-dark {
+  color: #fff;
+  background:
+    radial-gradient(60% 55% at 50% 0%, rgba(124, 92, 255, 0.55), rgba(124, 92, 255, 0) 70%),
+    radial-gradient(35% 40% at 88% 28%, rgba(214, 120, 255, 0.22), rgba(214, 120, 255, 0) 70%),
+    linear-gradient(180deg, #1a0f4a 0%, #140b3a 62%, #0d0826 100%);
+}
+.home .hero-dark { margin-top: calc(-1 * var(--header-h)); padding-top: calc(var(--header-h) + clamp(56px, 9vw, 96px)); min-height: min(100svh, 980px); }
+.hero-center { text-align: center; }
+.hero-center .display { margin-left: auto; margin-right: auto; }
+.hero-center .lead { margin-left: auto; margin-right: auto; color: rgba(255, 255, 255, 0.8); max-width: 60ch; }
+.hero-center .actions { justify-content: center; }
+.hero-dark .button.primary { background: #fff; border-color: #fff; color: var(--night); }
+.hero-dark .button.primary:hover { background: #e9e3ff; border-color: #e9e3ff; }
+.hero-dark .button:not(.primary) { color: #fff; border-color: rgba(255, 255, 255, 0.55); }
+.hero-dark .button:not(.primary):hover { background: rgba(255, 255, 255, 0.12); }
+.line > .grad {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffffff 0%, #c9b8ff 55%, #f0c2ff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-note { margin-top: 22px; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.82); }
+.note-icon { display: inline-block; width: 18px; height: 18px; margin-right: 8px; vertical-align: -4px; }
+.chips { margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.chips-label { align-self: center; margin-right: 4px; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.72); }
+.chips a {
+  padding: 8px 16px; border-radius: 999px; font-size: 0.9375rem; color: #fff; text-decoration: none;
+  background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+.chips a:hover { background: rgba(255, 255, 255, 0.16); transform: translateY(-1px); }
+
+/* "How DeepBuild is built": rounded dark cards */
+.work.work-3.work-cards { border-top: 0; gap: 20px; }
+.work.work-3.work-cards article,
+.work.work-3.work-cards article + article {
+  padding: 32px 28px 28px; margin-top: 0; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+/* industries as pills */
+.pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(32px, 5vw, 56px); }
+.pills li { padding: 12px 20px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06); font-size: 1.0625rem; }
+.pills + .section-intro { margin-top: 32px; }
+
+/* products as rounded cards */
+.rows.rows-cards { border-top: 0; display: grid; gap: 14px; }
+.rows.rows-cards > a {
+  background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 24px 28px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.rows.rows-cards > a:hover { padding-left: 28px; transform: translateY(-2px); border-color: #cfc6f5; box-shadow: 0 12px 32px rgba(26, 15, 74, 0.08); }
+.rows.rows-cards .status { color: var(--accent); }
+
+/* FAQ: native details/summary, no script */
+.faq { margin-top: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); max-width: 880px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { position: relative; cursor: pointer; list-style: none; padding: 22px 44px 22px 0; font-size: 1.1875rem; font-weight: 600; letter-spacing: -0.015em; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; font-weight: 400; color: var(--accent); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { padding: 0 0 22px; max-width: 68ch; color: var(--grey); }
+
+/* closing call to action as a gradient panel */
+.cta-band { padding-top: 0; }
+.cta-panel {
+  border-radius: 28px; padding: clamp(40px, 6vw, 80px); color: #fff;
+  background:
+    radial-gradient(70% 90% at 100% 0%, rgba(214, 120, 255, 0.32), rgba(214, 120, 255, 0) 60%),
+    linear-gradient(135deg, #24116e 0%, #4a2fc7 55%, #5b3fd9 100%);
+}
+.cta-panel p { margin-top: 20px; max-width: 46ch; font-size: 1.1875rem; color: rgba(255, 255, 255, 0.9); }
+.cta-panel a:not(.button) { color: #fff; }
+.cta-panel .actions { margin-top: 32px; }
+.cta-panel .button.primary { background: #fff; border-color: #fff; color: #24116e; }
+.cta-panel .button.primary:hover { background: #e9e3ff; border-color: #e9e3ff; }
+
+
+/* ---------- uniform indigo + automations + motion (2026-10-10, local) ----------
+   Palette: ink #1D1D1F, white, lavender mist #F4F2FD, slate-violet grey #625E78 (5.59:1 on mist, 6.19:1 on white),
+   night #140B3A (white 18.4:1, lavender-grey #B9B2DC 9.2:1), accent #5B3FD9. No pure black anywhere.
+   Motion never hides content; all of it stops under prefers-reduced-motion (global rule above). */
+.band-dark { background: linear-gradient(180deg, #1a0f4a 0%, #140b3a 100%); }
+.site-footer { background: #0f0830; }
+
+/* hero: slowly drifting glow */
+.hero-dark { position: relative; overflow: hidden; isolation: isolate; }
+.hero-dark::before, .hero-dark::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%;
+  width: 70vmax; height: 70vmax; filter: blur(40px); opacity: 0.6;
+}
+.hero-dark::before { top: -38vmax; left: -18vmax; background: radial-gradient(circle, rgba(124, 92, 255, 0.55), rgba(124, 92, 255, 0) 62%); animation: drift-a 18s ease-in-out infinite alternate; }
+.hero-dark::after { bottom: -45vmax; right: -22vmax; background: radial-gradient(circle, rgba(214, 120, 255, 0.4), rgba(214, 120, 255, 0) 62%); animation: drift-b 23s ease-in-out infinite alternate; }
+@keyframes drift-a { to { transform: translate(14vmax, 8vmax) scale(1.08); } }
+@keyframes drift-b { to { transform: translate(-12vmax, -10vmax) scale(1.1); } }
+
+/* ticker: a moving strip of automations */
+.ticker { display: flex; overflow: hidden; padding: 18px 0; background: var(--mist); border-bottom: 1px solid var(--line); }
+.ticker-track { list-style: none; margin: 0; padding: 0 14px 0 0; display: flex; gap: 14px; flex: none; animation: ticker 50s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker li { white-space: nowrap; padding: 8px 18px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-weight: 500; font-size: 0.9375rem; }
+@keyframes ticker { to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .ticker { justify-content: center; }
+  .ticker-track { flex-wrap: wrap; justify-content: center; flex: 1; padding: 0 var(--gutter); }
+  .ticker-track[aria-hidden="true"] { display: none; }
+}
+
+/* "Put AI agents to work": copy beside the animated workflow */
+.auto-split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(40px, 6vw, 96px); align-items: center; }
+@media (max-width: 900px) { .auto-split { grid-template-columns: 1fr; } }
+.auto-copy .section-intro + .section-intro { margin-top: 16px; }
+.auto-points { list-style: none; padding: 0; margin-top: 28px; display: grid; gap: 12px; }
+.auto-points li { position: relative; padding-left: 34px; }
+.auto-points li::before {
+  content: "\2713"; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 0.8125rem; font-weight: 700; color: #fff; background: var(--accent);
+}
+.auto-visual { margin: 0; }
+.auto-visual img { display: block; width: 100%; height: auto; border-radius: 28px; box-shadow: 0 30px 60px -20px rgba(26, 15, 74, 0.28); animation: float 7s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+/* "Automations we build": icon cards */
+.auto-grid { list-style: none; padding: 0; margin-top: clamp(36px, 5vw, 56px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 960px) { .auto-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .auto-grid { grid-template-columns: 1fr; } }
+.auto-card {
+  display: block; height: 100%; padding: 28px; border-radius: 20px; background: #fff; border: 1px solid var(--line);
+  color: inherit; text-decoration: none;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+}
+.auto-card:hover { transform: translateY(-4px); border-color: #cfc6f5; box-shadow: 0 18px 40px -18px rgba(26, 15, 74, 0.25); }
+.auto-icon {
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 15px; color: #fff;
+  background: linear-gradient(135deg, #5b3fd9 0%, #8a6bff 100%); box-shadow: 0 10px 20px -10px rgba(91, 63, 217, 0.7);
+  transition: transform 0.35s var(--ease);
+}
+.auto-icon svg { width: 26px; height: 26px; }
+.auto-card:hover .auto-icon { transform: rotate(-6deg) scale(1.06); }
+.auto-card h3 { margin-top: 20px; font-size: 1.1875rem; letter-spacing: -0.02em; line-height: 1.25; }
+.auto-card p { margin-top: 8px; font-size: 0.975rem; color: var(--grey); }
+
+/* header like hostinger.com: logo at the left edge, menu beside it, the pill at the far right (2026-10-10) */
+.header-inner { max-width: none; padding: 0 clamp(20px, 3vw, 40px); justify-content: flex-start; gap: clamp(20px, 3.4vw, 48px); }
+.site-header nav { flex: 1; }
+.site-header nav ul { align-items: center; }
+.site-header nav li:last-child { margin-left: auto; }
+

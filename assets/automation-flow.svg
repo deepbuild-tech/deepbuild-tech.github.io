@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" role="img" aria-labelledby="t d">
+  <title id="t">Example agentic workflow</title>
+  <desc id="d">A WhatsApp enquiry arrives; an agent checks the catalogue, price list and stock; the agent drafts the quote; a person reviews and approves it; the agent sends it and follows up.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, Arial, sans-serif; }
+    .label { fill: #625e78; font-size: 15px; font-weight: 600; letter-spacing: 0.2px; }
+    .main { fill: #1d1d1f; font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
+    .card { fill: #ffffff; stroke: #e2def5; stroke-width: 1.5; }
+    .rail { stroke: #d9d2fb; stroke-width: 3; fill: none; }
+    .flow { stroke: #5b3fd9; stroke-width: 3; fill: none; stroke-dasharray: 6 12; animation: flow 1.4s linear infinite; }
+    .node { fill: #ffffff; stroke: #5b3fd9; stroke-width: 2.5; }
+    .node-in { fill: #5b3fd9; }
+    .bar { fill: #ece8ff; }
+    .pill { fill: #5b3fd9; }
+    .pill-text { fill: #ffffff; font-size: 16px; font-weight: 600; }
+    .bubble { fill: #f4f2fd; }
+    .dot { fill: #5b3fd9; animation: travel 5.5s cubic-bezier(.45,0,.25,1) infinite; }
+    .halo { fill: #5b3fd9; opacity: .18; animation: travel 5.5s cubic-bezier(.45,0,.25,1) infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes flow { to { stroke-dashoffset: -36; } }
+    @keyframes travel { 0% { transform: translateY(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateY(440px); opacity: 0; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+    @media (prefers-reduced-motion: reduce) { .flow, .dot, .halo, .pulse { animation: none; } .dot, .halo { opacity: 0; } }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6f4ff"/>
+      <stop offset="1" stop-color="#ebe6ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="520" height="600" rx="28" fill="url(#bg)"/>
+
+  <!-- rail -->
+  <path class="rail" d="M60 85 V525"/>
+  <path class="flow" d="M60 85 V525"/>
+  <circle class="halo" cx="60" cy="85" r="14"/>
+  <circle class="dot" cx="60" cy="85" r="6"/>
+
+  <!-- 1 enquiry -->
+  <circle class="node" cx="60" cy="85" r="11"/><circle class="node-in" cx="60" cy="85" r="4.5"/>
+  <rect class="card" x="96" y="40" width="396" height="90" rx="16"/>
+  <text class="label" x="118" y="70">WhatsApp enquiry</text>
+  <rect class="bubble" x="118" y="82" width="352" height="34" rx="12"/>
+  <text class="main" x="132" y="106" style="font-weight:500">“Do you have 200 tubes in stock?”</text>
+
+  <!-- 2 check -->
+  <circle class="node" cx="60" cy="195" r="11"/><circle class="node-in" cx="60" cy="195" r="4.5"/>
+  <rect class="card" x="96" y="150" width="396" height="90" rx="16"/>
+  <text class="label" x="118" y="180">Agent</text>
+  <text class="main" x="118" y="212">Checks catalogue, prices and stock</text>
+
+  <!-- 3 draft -->
+  <circle class="node" cx="60" cy="305" r="11"/><circle class="node-in" cx="60" cy="305" r="4.5"/>
+  <rect class="card" x="96" y="260" width="396" height="90" rx="16"/>
+  <text class="label" x="118" y="290">Agent</text>
+  <text class="main" x="118" y="322">Drafts the quote</text>
+  <rect class="bar" x="330" y="286" width="138" height="10" rx="5"/>
+  <rect class="bar" x="330" y="304" width="104" height="10" rx="5"/>
+  <rect class="bar" x="330" y="322" width="122" height="10" rx="5"/>
+
+  <!-- 4 approve -->
+  <circle class="node" cx="60" cy="415" r="11"/><circle class="node-in" cx="60" cy="415" r="4.5"/>
+  <rect class="card" x="96" y="370" width="396" height="90" rx="16"/>
+  <text class="label" x="118" y="400">You</text>
+  <text class="main" x="118" y="432">Review and approve</text>
+  <g class="pulse">
+    <rect class="pill" x="356" y="396" width="112" height="40" rx="20"/>
+    <text class="pill-text" x="412" y="421" text-anchor="middle">Approve</text>
+  </g>
+
+  <!-- 5 send -->
+  <circle class="node" cx="60" cy="525" r="11"/><circle class="node-in" cx="60" cy="525" r="4.5"/>
+  <rect class="card" x="96" y="480" width="396" height="90" rx="16"/>
+  <text class="label" x="118" y="510">Agent</text>
+  <text class="main" x="118" y="542">Sends it and follows up</text>
+  <circle cx="448" cy="525" r="18" fill="#ece8ff"/>
+  <path d="M440 525 l6 6 l11 -12" fill="none" stroke="#5b3fd9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
