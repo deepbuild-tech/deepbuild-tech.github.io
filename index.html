@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
-<title>DeepBuild | AI systems for India's growing businesses</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<title>DeepBuild | Agentic AI for India's growing businesses</title>
 <meta name="description" content="DeepBuild designs, builds and runs agentic AI systems for growing businesses in India, and builds domain-specific agentic products for finance and healthcare.">
 <link rel="canonical" href="https://deepbuild.tech/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DeepBuild">
-<meta property="og:title" content="DeepBuild | AI systems for India's growing businesses">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="DeepBuild | Agentic AI for India's growing businesses">
 <meta property="og:description" content="DeepBuild designs, builds and runs agentic AI systems for growing businesses in India, and builds domain-specific agentic products for finance and healthcare.">
 <meta property="og:url" content="https://deepbuild.tech/">
 <meta property="og:image" content="https://deepbuild.tech/assets/og-image.png">
@@ -23,13 +25,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "DeepBuild",
-  "url": "https://deepbuild.tech/",
-  "logo": "https://deepbuild.tech/assets/deepbuild-tech-logo.svg",
-  "description": "DeepBuild designs, builds and runs agentic AI systems for growing businesses in India, and builds domain-specific agentic products for finance and healthcare.",
-  "email": "hello@deepbuild.tech",
-  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressCountry": "IN" }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "DeepBuild",
+      "url": "https://deepbuild.tech/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://deepbuild.tech/assets/logo-mark-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "description": "DeepBuild designs, builds and runs agentic AI systems for growing businesses in India, and builds domain-specific agentic products for finance and healthcare.",
+      "email": "hello@deepbuild.tech",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressCountry": "IN"
+      },
+      "@id": "https://deepbuild.tech/#organization",
+      "alternateName": "DeepBuild.Tech",
+      "image": "https://deepbuild.tech/assets/og-image.png",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://deepbuild.tech/#website",
+      "url": "https://deepbuild.tech/",
+      "name": "DeepBuild",
+      "alternateName": [
+        "DeepBuild.Tech",
+        "deepbuild.tech"
+      ],
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://deepbuild.tech/#organization"
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -51,7 +87,7 @@
 <main id="main">
 <section class="band band-light hero" aria-labelledby="intro">
   <div class="wrap">
-    <h1 id="intro" class="display" data-lines><span class="line"><span>Agentic AI, built into</span></span><span class="line"><span>the work your business</span></span><span class="line"><span>already does.</span></span></h1>
+    <h1 id="intro" class="display" data-lines><span class="line"><span>Bring AI into the</span></span><span class="line"><span>work your business</span></span><span class="line"><span>already does.</span></span></h1>
     <p class="lead fade" data-delay="380">DeepBuild designs, builds and runs agentic systems for growing businesses in India: AI agents that connect to your tools, carry out your workflows and hand people the decisions that matter. What we learn across industries becomes our own domain-specific products, starting with finance and healthcare.</p>
     <p class="actions fade" data-delay="520"><a class="button primary" href="/products/">Our products</a> <a class="button" href="/services/">Our services</a></p>
     <div class="hero-rule" aria-hidden="true"></div>

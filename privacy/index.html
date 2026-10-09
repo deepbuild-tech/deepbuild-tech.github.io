@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <title>Privacy | DeepBuild</title>
 <meta name="description" content="What the DeepBuild website collects: nothing directly. No cookies, analytics or third-party scripts; GitHub Pages logs visitor IP addresses for security.">
 <link rel="canonical" href="https://deepbuild.tech/privacy/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DeepBuild">
+<meta property="og:locale" content="en_IN">
 <meta property="og:title" content="Privacy | DeepBuild">
 <meta property="og:description" content="What the DeepBuild website collects: nothing directly. No cookies, analytics or third-party scripts; GitHub Pages logs visitor IP addresses for security.">
 <meta property="og:url" content="https://deepbuild.tech/privacy/">
@@ -20,6 +22,26 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "DeepBuild",
+      "item": "https://deepbuild.tech/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy",
+      "item": "https://deepbuild.tech/privacy/"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
